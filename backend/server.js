@@ -2,9 +2,11 @@ const express = require("express");
 const notes = require("./data/notes");
 const dotenv = require("dotenv");
 const morgan = require('morgan')
+const connectDB = require("./config/db")
 const app = express();
 dotenv.config();
 app.use(morgan("common"))
+connectDB()
 
 app.get("/", (req, res) => {
   res.json("APi for note");
