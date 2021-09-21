@@ -1,9 +1,21 @@
-import React from "react";
+import {useEffect} from "react";
 import { Button, Container, Row } from "react-bootstrap";
 import "./LandingPage.css";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
+
+    // agar user ne login kiya to uska info sabkuch 
+  // localstorage main save ho jayega 
+  // and wo back login page par nahin ja payega
+  // useEffect(() => {
+  //   const userInfo = localStorage.getItem("userInfo");
+
+  //   if (userInfo) {
+  //     history.push("/mynotes");
+  //   }
+  // }, [history]);
+
   return (
     <div className="main">
       <Container>
